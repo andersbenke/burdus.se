@@ -1,0 +1,160 @@
+/* === RESET/BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+/* === BAKGRUND & STANDARDTEXT === */
+body {
+  /* Mörkare gul/orange bakgrund */
+  background-color: #B8860B; 
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  color: #000; /* Textfärg */
+}
+
+/* === RUBRIKER & TEXT === */
+/* Bebas Neue-länken finns i HTML, fallback: Impact, sans-serif */
+h1, h2, h3 {
+  font-family: 'Bebas Neue', Impact, sans-serif; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+a {
+  color: #8B0000;
+}
+
+/* === HEADER (centrerad) === */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+header .logo h1 {
+  font-size: 10rem;  /* Större rubrik för “Burdus” */
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* === GRUNDARE-SEKTION === */
+.grundare-section {
+  padding: 2rem 1rem;
+  /* Transparent => bakgrundsfärgen lyser igenom */
+}
+
+.grundare-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.grundare {
+  /* Ljusare nyans för att sticka ut från bakgrunden, men inte för skarp */
+  background-color: #B8860B;
+  max-width: 300px;
+  text-align: center;
+}
+
+.grundare h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-family: Oswald;
+}
+
+#header-team-image img {
+    display: block;
+    margin: auto;
+    
+    width: auto;
+    height: 250px;
+}
+
+.grundare-bild {
+  margin-bottom: 1rem;
+}
+
+.grundare-bild img {
+  max-width: 100%;
+}
+
+/* === INLÄGG-SEKTION === */
+.inlagg-section {
+  padding: 2rem 1rem;
+}
+
+.inlagg-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: Oswald;
+}
+
+.inlagg {
+  /* Samma färg som body-bakgrunden => smälter in */
+  background-color: transparent;
+  /* Tunn, mörkare nyans för att skilja inläggen från bakgrunden (valfritt) */
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.inlagg h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-family: Oswald;
+}
+
+/* === RESPONSIV DESIGN (MOBIL) === */
+@media (max-width: 768px) {
+  .grundare-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grundare {
+    max-width: 90%;
+  }
+
+  .inlagg {
+    max-width: 90%;
+  }
+}
+
+/* Lägg till dessa rader i style.css */
+
+@media (max-width: 480px) {
+  header .logo h1 {
+    font-size: 5rem; /* Justera siffra efter behov */
+  }
+
+  header nav ul li a {
+    font-size: 1.5em;
+  }
+}
